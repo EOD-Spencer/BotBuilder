@@ -5,6 +5,13 @@
         <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
         <Nullable>enable</Nullable>
     </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <MtouchLink>Full</MtouchLink>
+      <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+      <CodesignKey>iPhone Developer</CodesignKey>
+      <MtouchDebug>true</MtouchDebug>
+      <IOSDebugOverWiFi>true</IOSDebugOverWiFi>
+    </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Avalonia.iOS"/>
