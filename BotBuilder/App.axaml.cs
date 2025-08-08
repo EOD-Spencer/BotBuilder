@@ -50,21 +50,4 @@ public class App : Application
 
         base.OnFrameworkInitializationCompleted();
     }
-
-    /// <summary>
-    /// Disables Avalonia's default data annotation validation plugins to prevent redundant data validation processes.
-    /// This is particularly useful when using additional validation frameworks, ensuring that only the intended validation logic is applied.
-    /// </summary>
-    private void DisableAvaloniaDataAnnotationValidation()
-    {
-        // Get an array of plugins to remove
-        DataAnnotationsValidationPlugin[] dataValidationPluginsToRemove =
-            BindingPlugins.DataValidators.OfType<DataAnnotationsValidationPlugin>().ToArray();
-
-        // remove each entry found
-        foreach (DataAnnotationsValidationPlugin plugin in dataValidationPluginsToRemove)
-        {
-            BindingPlugins.DataValidators.Remove(plugin);
-        }
-    }
 }
