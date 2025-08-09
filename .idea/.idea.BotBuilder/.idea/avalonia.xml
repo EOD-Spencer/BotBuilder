@@ -6,6 +6,7 @@
         <entry key="BotBuilder/App.axaml" value="BotBuilder.Browser/BotBuilder.Browser.csproj" />
         <entry key="BotBuilder/Views/MainView.axaml" value="BotBuilder.Browser/BotBuilder.Browser.csproj" />
         <entry key="BotBuilder/Views/MainWindow.axaml" value="BotBuilder.Browser/BotBuilder.Browser.csproj" />
+        <entry key="BotBuilder/Views/SplashWindow.axaml" value="BotBuilder.Browser/BotBuilder.Browser.csproj" />
       </map>
     </option>
   </component>

@@ -1,6 +1,8 @@
 ﻿## Creative Minds Behind This ✨
 
-A big thank you to all contributors! You are welcome to modify and distribute this project under the terms of the applicable open-source license, provided you give appropriate credit to the original authors. If you develop this project further, please ensure to acknowledge the original project and provide the corresponding credits.  
+A big thank you to all contributors! You are welcome to modify and distribute this project under the terms of the
+applicable open-source license, provided you give appropriate credit to the original authors. If you develop this
+project further, please ensure to acknowledge the original project and provide the corresponding credits.  
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

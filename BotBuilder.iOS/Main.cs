@@ -1,17 +1,29 @@
+// ********************************************************************
+// File Name:  Main.cs
+// Project:       BotBuilder.iOS
+// Author:        ${GitLabUser.Name}
+// Copyright (c) 2025 William Spencer.  All Rights Reserved.
+// Licensed under the MIT License.  See LICENSE.txt for details.
+// ********************************************************************
+
+#region
+
 using UIKit;
+
+#endregion
 
 namespace BotBuilder.iOS;
 
 /// <summary>
-/// Represents the main entry point and application logic for the BotBuilder.iOS namespace.
-/// This class serves as an essential component for handling lifecycle events, application state,
-/// and other primary operations within the iOS environment.
+///     Represents the main entry point and application logic for the BotBuilder.iOS namespace.
+///     This class serves as an essential component for handling lifecycle events, application state,
+///     and other primary operations within the iOS environment.
 /// </summary>
 public static class Application
 {
     /// <summary>
-    /// Defines the main entry point for the application.
-    /// This method initializes the iOS application by invoking the UIApplication.Main method.
+    ///     Defines the main entry point for the application.
+    ///     This method initializes the iOS application by invoking the UIApplication.Main method.
     /// </summary>
     /// <param name="args">An array of strings containing the command-line arguments passed to the application at startup.</param>
     private static void Main(string[] args)
