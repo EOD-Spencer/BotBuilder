@@ -27,14 +27,3 @@ profile:
 #Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
 #plugins:
 #  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
-
-# Possible values: apply | cleanup
-fixesStrategy: apply
-
-push-fixes: branch
-pr-mode: false
-
-permissions:
-  contents: write
-  pull-requests: write
-  checks: write

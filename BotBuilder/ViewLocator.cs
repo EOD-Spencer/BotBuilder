@@ -45,15 +45,21 @@ public class ViewLocator : IDataTemplate
             return null;
         }
 
-        string name = param.GetType().FullName!.Replace("ViewModel", "View", StringComparison.Ordinal);
-        Type? type = Type.GetType(name);
-
-        if (type != null)
+        string? fullName = param.GetType().FullName;
+        if (fullName != null)
         {
-            return (Control)Activator.CreateInstance(type)!;
+            string name = fullName.Replace("ViewModel", "View", StringComparison.Ordinal);
+            Type? type = Type.GetType(name);
+
+            if (type != null)
+            {
+                return Activator.CreateInstance(type) as Control;
+            }
+
+            return new TextBlock { Text = "Not Found: " + name };
         }
 
-        return new TextBlock { Text = "Not Found: " + name };
+        return null;
     }
 
     /// <summary>
@@ -62,7 +68,7 @@ public class ViewLocator : IDataTemplate
     /// </summary>
     /// <param name="data">
     ///     The object to examine. It is typically the data context associated
-    ///     with a view, and can potentially be null.
+    ///     with a view and can potentially be null.
     /// </param>
     /// <returns>
     ///     <c>true</c> if the data is of type <see cref="ViewModelBase" />; otherwise, <c>false</c>.

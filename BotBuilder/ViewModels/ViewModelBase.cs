@@ -19,4 +19,4 @@ namespace BotBuilder.ViewModels;
 ///     <see cref="ObservableObject" />, providing built-in support for property change
 ///     notifications and data binding.
 /// </summary>
-public abstract class ViewModelBase : ObservableObject { }
+public abstract class ViewModelBase : ObservableObject;
