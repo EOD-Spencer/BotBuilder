@@ -40,26 +40,22 @@ public class ViewLocator : IDataTemplate
     /// </returns>
     public Control? Build(object? param)
     {
-        if (param is null)
+        string? fullName = param?.GetType().FullName;
+        if (fullName is null)
         {
             return null;
         }
 
-        string? fullName = param.GetType().FullName;
-        if (fullName != null)
+        string name = fullName.Replace("ViewModel", "View", StringComparison.Ordinal);
+        Type? type = Type.GetType(name);
+
+        if (type != null)
         {
-            string name = fullName.Replace("ViewModel", "View", StringComparison.Ordinal);
-            Type? type = Type.GetType(name);
-
-            if (type != null)
-            {
-                return Activator.CreateInstance(type) as Control;
-            }
-
-            return new TextBlock { Text = "Not Found: " + name };
+            return Activator.CreateInstance(type) as Control;
         }
 
-        return null;
+        return new TextBlock { Text = "Not Found: " + name };
+
     }
 
     /// <summary>
